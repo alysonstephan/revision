@@ -1,0 +1,66 @@
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+/* error found with lines 24 and 25 when checked with validator, unsure why because of lack of full understanding of clearfix */
+
+
+* {
+background: url(background.jpg);
+font-size: 100%;
+box-sizing: border-box;
+-moz-box-sizing: border-box;
+}
+
+h1 {
+background: #FFFAF9;
+font-family: 'Dawning of a New Day', cursive;
+font-size: 200px;
+text-align: center;
+}
+
+h2 {
+background: #FFFAF9;
+font-family: 'Quicksand', sans-serif;
+font-size: 40px;
+text-align: center;
+padding: 10px
+}
+
+
+img {
+ opacity: 0.5; 
+ padding: 5px;
+ border-radius: 250px
+}
+
+img:hover {
+opacity: 1;
+border-radius: 0px;
+}
+
+
+/* could not successfully code css for images to react at a mobile device size. Attempted to use media queries for mobile without success. Images react for all other sizes except mobile */ 
