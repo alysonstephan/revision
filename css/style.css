@@ -54,7 +54,9 @@ padding: 10px
 img {
  opacity: 0.5; 
  padding: 5px;
- border-radius: 250px
+ border-radius: 250px;
+ max-width: 100%;
+ height: auto !important;
 }
 
 img:hover {
